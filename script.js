@@ -34,32 +34,33 @@ document.onkeydown = ()=>{
       case "":
          break;
       case "banner":
-         terminalContent.innerHTML += banner;
-         terminalContent.innerHTML += '<br>';
-         Input.value = "";
+         banner.forEach((line) => {
+            terminalContent.innerHTML += line;
+         });
          break;
       case "clear":
          terminalContent.innerHTML = "";
          banner.forEach((line) => {
             terminalContent.innerHTML += line;
          });
-         Input.value = "";
          break;
       case "help":
          terminalContent.innerHTML += help;
-         Input.value = "";
          break;
       case "whoami":
          terminalContent.innerHTML += whoami;
-         Input.value = "";
          break;
       default:
          terminalContent.innerHTML += `
          <span class="err">ERROR... </span><span>oops it looks like <span class="err">${Input.value}</span> is not a command</span><br>
          `;
-         Input.value = "";
          break;
       }
+      
+      terminalContent.innerHTML += '<br>';
+      Input.value = "";
 
+      const container = document.getElementById('container');
+      window.scrollTo(0, container.scrollHeight);
    }
 }

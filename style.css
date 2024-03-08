@@ -17,6 +17,7 @@ body{
 
 .console-input{
    display: flex;
+   overflow-y: scroll;
 }
 
 #input{
