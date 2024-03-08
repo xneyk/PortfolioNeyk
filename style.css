@@ -1,0 +1,42 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Source Code Pro', monospace;
+   color: #659B5E;
+   font-size: 20px;
+}
+
+body{
+   background-color: #1C2541;
+   padding: 50px;
+}
+
+#terminal-content{
+   margin-bottom: 50px;
+}
+
+.console-input{
+   display: flex;
+}
+
+#input{
+   padding-left: 5px;
+   width: 100%;
+   background: none;
+   outline: none;
+   border: none;
+}
+
+/*COLORIZE*/
+
+.err{
+   color: #D72638
+}
+
+.purple{
+   color: #B934BE;
+}
+
+.lightblue{
+   color: #0197F6;
+}
