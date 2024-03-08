@@ -25,7 +25,7 @@ let help = [
 ]
 
 
-document.onkeydown = ()=>{
+document.onkeydown = () => {
    if(event.keyCode == 13){
       const terminalContent = document.getElementById("terminal-content");
       const Input = document.getElementById("input");
