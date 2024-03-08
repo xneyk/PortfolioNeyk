@@ -31,36 +31,36 @@ document.onkeydown = ()=>{
       const Input = document.getElementById("input");
 
       switch(Input.value){
-      case "":
-         break;
-      case "banner":
-         banner.forEach((line) => {
-            terminalContent.innerHTML += line;
-         });
-         break;
-      case "clear":
-         terminalContent.innerHTML = "";
-         banner.forEach((line) => {
-            terminalContent.innerHTML += line;
-         });
-         break;
-      case "help":
-         terminalContent.innerHTML += help;
-         break;
-      case "whoami":
-         terminalContent.innerHTML += whoami;
-         break;
-      default:
-         terminalContent.innerHTML += `
-         <span class="err">ERROR... </span><span>oops it looks like <span class="err">${Input.value}</span> is not a command</span><br>
-         `;
-         break;
+         case "":
+            break;
+         case "banner":
+            banner.forEach((line) => {
+               terminalContent.innerHTML += line;
+            });
+            break;
+         case "clear":
+            terminalContent.innerHTML = "";
+            banner.forEach((line) => {
+               terminalContent.innerHTML += line;
+            });
+            break;
+         case "help":
+            terminalContent.innerHTML += help;
+            break;
+         case "whoami":
+            terminalContent.innerHTML += whoami;
+            break;
+         default:
+            terminalContent.innerHTML += `
+            <span class="err">ERROR... </span><span>oops it looks like <span class="err">${Input.value}</span> is not a command</span><br>
+            `;
+            break;
       }
       
       terminalContent.innerHTML += '<br>';
       Input.value = "";
 
       const container = document.getElementById('container');
-      window.scrollTo(0, container.scrollHeight);
+      window.scrollTo(0, container.scrollHeight); //keeps scroll at the bottom of the document
    }
 }
